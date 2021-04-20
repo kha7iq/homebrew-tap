@@ -11,23 +11,23 @@ class Pingme < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Darwin_x86_64.tar.gz"
-    sha256 "9099608c1147c8c36cb9ae074562898fbe424122764e2e9c049fce40da3d12ad"
+    sha256 "e8446fbe840c973ea33391001d872e85cef0fdea1613f4c352be6232c57c0f0d"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Darwin_arm64.tar.gz"
-    sha256 "fd8ebcfdec42c4fd62f63af5bd9225a62c054bdce6a65983364b5949249638f3"
+    sha256 "79116a723c44b091fc2ac37c55c02a5fccc9893600b9c14871c3e9827ef4de2c"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Linux_x86_64.tar.gz"
-    sha256 "3bda66a6ff2a1b79a043413c392f15176ef5aeb57440a369dd0879dade47be15"
+    sha256 "83af63dc3db92906862a994295e0769493b44bb62ba205cc14520f0963ecc0b1"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
     url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Linux_armv6.tar.gz"
-    sha256 "e23245492cf6e81961c8a20505286c5504505cef5c95876af1b4dcd58271c934"
+    sha256 "b072f88257ede38c8a0bf7cf5dc06bba3aebe965fb31ffd1e1bd3041e2ee2d43"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Linux_arm64.tar.gz"
-    sha256 "a0265a40da87aa95deb1179bce60a70a49a54b5ce67c036075167b4a665de9ff"
+    sha256 "5991b18c4da120dcb0e362fd102c05a90d102f9acd1b718b252d0bc80b2f1586"
   end
 
   def install

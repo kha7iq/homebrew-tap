@@ -5,29 +5,29 @@
 class Pingme < Formula
   desc "PingMe is a CLI tool which provides the ability to send messages or alerts to multiple messaging platforms."
   homepage "pingme.lmno.pk"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Darwin_x86_64.tar.gz"
-    sha256 "e8446fbe840c973ea33391001d872e85cef0fdea1613f4c352be6232c57c0f0d"
+    url "https://github.com/kha7iq/pingme/releases/download/v0.1.5/pingme_Darwin_x86_64.tar.gz"
+    sha256 "133ee95898ea17609b86c960f5dd4176b9e79d2679152a73f999467678c3e60d"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Darwin_arm64.tar.gz"
-    sha256 "79116a723c44b091fc2ac37c55c02a5fccc9893600b9c14871c3e9827ef4de2c"
+    url "https://github.com/kha7iq/pingme/releases/download/v0.1.5/pingme_Darwin_arm64.tar.gz"
+    sha256 "6058df71e3641fa227cfe860876487dcdb5434c6d5e6c9440a8e178e6b0ad7ca"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Linux_x86_64.tar.gz"
-    sha256 "83af63dc3db92906862a994295e0769493b44bb62ba205cc14520f0963ecc0b1"
+    url "https://github.com/kha7iq/pingme/releases/download/v0.1.5/pingme_Linux_x86_64.tar.gz"
+    sha256 "e090ca62e2c13bdf0f8d23a04e355834202c20246ac925d9e64fc8d00d3729e0"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Linux_armv6.tar.gz"
-    sha256 "b072f88257ede38c8a0bf7cf5dc06bba3aebe965fb31ffd1e1bd3041e2ee2d43"
+    url "https://github.com/kha7iq/pingme/releases/download/v0.1.5/pingme_Linux_armv6.tar.gz"
+    sha256 "6d92feaea6085f821e55bb5aa7c9a982f06ebefdfb2b9fcf9a669d02dad89f2e"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.4/pingme_Linux_arm64.tar.gz"
-    sha256 "5991b18c4da120dcb0e362fd102c05a90d102f9acd1b718b252d0bc80b2f1586"
+    url "https://github.com/kha7iq/pingme/releases/download/v0.1.5/pingme_Linux_arm64.tar.gz"
+    sha256 "58991e87aa2498b2b461d2aa1f86fcb8690109fe7de72b90149360065a80d409"
   end
 
   def install

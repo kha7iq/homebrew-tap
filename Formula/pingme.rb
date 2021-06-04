@@ -5,29 +5,34 @@
 class Pingme < Formula
   desc "PingMe is a CLI tool which provides the ability to send messages or alerts to multiple messaging platforms."
   homepage "pingme.lmno.pk"
-  version "0.1.9"
+  version "0.2.0"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.9/pingme_Darwin_x86_64.tar.gz"
-    sha256 "c302154bb6e217aeb41b609755f3c4dc169c66e8e6e3a8d63c905ad788e0f898"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/kha7iq/pingme/releases/download/v0.2.0/pingme_Darwin_x86_64.tar.gz"
+      sha256 "bb30204a44d07bc9ffae621714b32458d02b8bfb4cb598c7aa1ae70447de66d2"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/kha7iq/pingme/releases/download/v0.2.0/pingme_Darwin_arm64.tar.gz"
+      sha256 "a85ef42f9e5c489914645307f04e41295803cf7f7ccb3a63d48d94dba8195419"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.9/pingme_Darwin_arm64.tar.gz"
-    sha256 "4c7abc94e0608f554a8cfe452ab4ca29d1137b139c4e602528d441f5b5484569"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.9/pingme_Linux_x86_64.tar.gz"
-    sha256 "ca2da36837ade604743fb7ca394fc0d085b63735e93a8fdb19fc57742e042dca"
-  end
-  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.9/pingme_Linux_armv6.tar.gz"
-    sha256 "173bcd557ec4999be28c835724869b4854150e4d27df2f3bf7ea11fea1090645"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/kha7iq/pingme/releases/download/v0.1.9/pingme_Linux_arm64.tar.gz"
-    sha256 "9ec9ddc0c98ad89e04433ba3141c4bb2d884bc214a93c87d4b18e9e6cef87251"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/kha7iq/pingme/releases/download/v0.2.0/pingme_Linux_x86_64.tar.gz"
+      sha256 "6cb4fc5d7a8a56043eb81d0d38bed8a7341505b18e5e831d9ad779e95958b439"
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/kha7iq/pingme/releases/download/v0.2.0/pingme_Linux_armv6.tar.gz"
+      sha256 "bd5d7d9e0c93333bfd38f3a580d2bcd71fa10f734a4cc51d50658e1b7670ec78"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kha7iq/pingme/releases/download/v0.2.0/pingme_Linux_arm64.tar.gz"
+      sha256 "cb30e8fef2cd12e60a3b764bbb62607e7eea72ee0a5a843e42f36142016e67e3"
+    end
   end
 
   def install

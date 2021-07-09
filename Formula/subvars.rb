@@ -5,33 +5,33 @@
 class Subvars < Formula
   desc "Substitute environment variables from command line in config files defined as go template format."
   homepage "subvars.lmno.pk"
-  version "0.1.0"
+  version "0.1.2"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kha7iq/subvars/releases/download/v0.1.0/subvars_Darwin_x86_64.tar.gz"
-      sha256 "a090f452e0a5befdaa6ca18a0233b0428de7e1f7262ba67ae4e65dd94b2ac840"
+      url "https://github.com/kha7iq/subvars/releases/download/v0.1.2/subvars_Darwin_x86_64.tar.gz"
+      sha256 "b530a20c416c74febd6a8708b7f303b003ace10d9921ad4fc98b7d34af7cee39"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kha7iq/subvars/releases/download/v0.1.0/subvars_Darwin_arm64.tar.gz"
-      sha256 "886a434e5ecaa4bff7ec1c9272b01248130e221de7ac4630f36df5b2400233bb"
+      url "https://github.com/kha7iq/subvars/releases/download/v0.1.2/subvars_Darwin_arm64.tar.gz"
+      sha256 "384d16878123a15c0d93abcd92d017f1ed72d91efb631d031db594ee1aea18ee"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kha7iq/subvars/releases/download/v0.1.0/subvars_Linux_x86_64.tar.gz"
-      sha256 "fbaeeb28f3f8c3d9eada6a06b9e2d4a84004f358b2d62a174abe372b9826fdb7"
+      url "https://github.com/kha7iq/subvars/releases/download/v0.1.2/subvars_Linux_x86_64.tar.gz"
+      sha256 "1638f854cb877e34479067abd761579f1eb99d33421781d5d81a574f55f1be66"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kha7iq/subvars/releases/download/v0.1.0/subvars_Linux_armv6.tar.gz"
-      sha256 "f4a2ee1a673ddbf048bb6bd977867c69aa83861e5771a20b5e7157fc65eace12"
+      url "https://github.com/kha7iq/subvars/releases/download/v0.1.2/subvars_Linux_armv6.tar.gz"
+      sha256 "04955b6f3055e70a04f3b101af31556557029d900b2161d7dfe03181035b44c0"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kha7iq/subvars/releases/download/v0.1.0/subvars_Linux_arm64.tar.gz"
-      sha256 "e7fb379a4f0e04cc23c05275fcc1d3a073b524a143cc36251d6c6cc3c270bb07"
+      url "https://github.com/kha7iq/subvars/releases/download/v0.1.2/subvars_Linux_arm64.tar.gz"
+      sha256 "a44bbbc39dff2a4dae91a7c3ae43133a93aa5756c911a6f3e77f5379b39eac73"
     end
   end
 

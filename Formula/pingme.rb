@@ -7,7 +7,6 @@ class Pingme < Formula
   homepage "pingme.lmno.pk"
   version "0.2.4"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

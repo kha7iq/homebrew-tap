@@ -7,7 +7,6 @@ class Subvars < Formula
   homepage "subvars.lmno.pk"
   version "0.1.4"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

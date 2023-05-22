@@ -5,21 +5,21 @@
 class Ncp < Formula
   desc "NCP is a file transfer utility that enables efficient copying of files to and from an NFS server."
   homepage "https://ncp.lmno.pk"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kha7iq/ncp/releases/download/v0.1.1/ncp_Darwin_arm64.tar.gz"
-      sha256 "a1bb573795f9dcc774dbdcda6c3e025fb33315d5c4834999af07161bb67f3f03"
+    if Hardware::CPU.intel?
+      url "https://github.com/kha7iq/ncp/releases/download/v0.1.2/ncp_Darwin_x86_64.tar.gz"
+      sha256 "7db2493b5c2c8a06db7d63ec604127969bb2a371b23338612f6947b85f7b4852"
 
       def install
         bin.install "ncp"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kha7iq/ncp/releases/download/v0.1.1/ncp_Darwin_x86_64.tar.gz"
-      sha256 "a0e50b980e13c70bc69f151db04d5044ad6bb332f1462d9e3a3b541d5b2cf21f"
+    if Hardware::CPU.arm?
+      url "https://github.com/kha7iq/ncp/releases/download/v0.1.2/ncp_Darwin_arm64.tar.gz"
+      sha256 "90a5ac935657c73b8557a5c1f99e743508fe4a915e6d0ad878403525ec2fb446"
 
       def install
         bin.install "ncp"
@@ -28,25 +28,25 @@ class Ncp < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kha7iq/ncp/releases/download/v0.1.1/ncp_Linux_arm.tar.gz"
-      sha256 "835fd85309c16985d4b13fdbb842db548e00ecddee92522f6c6a1a31d7254135"
+    if Hardware::CPU.intel?
+      url "https://github.com/kha7iq/ncp/releases/download/v0.1.2/ncp_Linux_x86_64.tar.gz"
+      sha256 "c7d500d41d5f963b8740189a1ab688e7fc66bbcae98e6628d21d9fc78cfc671d"
 
       def install
         bin.install "ncp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kha7iq/ncp/releases/download/v0.1.1/ncp_Linux_arm64.tar.gz"
-      sha256 "8e4c0bc7a7f65ce7ca9e3612a66cdfb208f7290e6bf4dcc35ae541e27e42e49d"
+      url "https://github.com/kha7iq/ncp/releases/download/v0.1.2/ncp_Linux_arm64.tar.gz"
+      sha256 "cef5d485e8da9a30f7377e87c74ca0efd355f06f49b7cc62b2ec4065e41d5fc3"
 
       def install
         bin.install "ncp"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kha7iq/ncp/releases/download/v0.1.1/ncp_Linux_x86_64.tar.gz"
-      sha256 "db89c545fc82c493bfd154c489a30835cfa8da04008e35f42bfd6ed05e346ffd"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/kha7iq/ncp/releases/download/v0.1.2/ncp_Linux_arm.tar.gz"
+      sha256 "b96d67114cc7af7038125195e934b872d606baf45d757aea74d7161aa63ddd80"
 
       def install
         bin.install "ncp"
